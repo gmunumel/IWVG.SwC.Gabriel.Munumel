@@ -50,7 +50,7 @@ public class DecimalCollectionTest {
 	}
 	
 	@Test
-	public void testminor() {
+	public void testMinor() {
 		assertEquals(-1.0, this.decimalCollection.minor(), 10e-5);
 	}
 
@@ -58,6 +58,12 @@ public class DecimalCollectionTest {
 	public void testHigherArithmeticExceptionIfEmpty() {
 		exception.expect(ArithmeticException.class);
 		new DecimalCollection().higher();
+	}
+	
+	@Test
+	public void testMinorArithmeticExceptionIfEmpty() {
+		exception.expect(ArithmeticException.class);
+		new DecimalCollection().minor();
 	}
 
 }
