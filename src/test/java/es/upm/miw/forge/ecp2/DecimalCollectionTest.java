@@ -48,6 +48,11 @@ public class DecimalCollectionTest {
 	public void testHigher() {
 		assertEquals(3.0, this.decimalCollection.higher(), 10e-5);
 	}
+	
+	@Test
+	public void testminor() {
+		assertEquals(-1.0, this.decimalCollection.minor(), 10e-5);
+	}
 
 	@Test
 	public void testHigherArithmeticExceptionIfEmpty() {
