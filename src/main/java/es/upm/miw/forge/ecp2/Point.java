@@ -36,6 +36,23 @@ public class Point {
         this.x -= origin.getX();
         this.y -= origin.getY();
     }
+    
+    public int limitX() {
+        if (this.x < 0 || this.x > 100) {
+            throw new IllegalArgumentException("El valor de x debe estar entre 0 y 100");
+        }else {
+            return this.x;
+        }
+    }
+    
+    public int limitY() {
+        if (this.y < -10 || this.y > 10) {
+            throw new IllegalArgumentException("El valor de y debe estar entre -10 y 10");
+        }else {
+            return this.y;
+        }
+    }
+    
 
     @Override
     public String toString() {
