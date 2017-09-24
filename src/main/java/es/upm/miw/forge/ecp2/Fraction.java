@@ -65,4 +65,12 @@ public class Fraction {
 		assert b != null;
 	    return a.decimal() > b.decimal();
 	}
+    
+    public boolean isEquivalente(Fraction a, Fraction b) {
+        assert a != null;
+        assert b != null;
+        int extremos = a.numerator*b.denominator;
+        int medios = a.denominator*b.numerator;
+        return extremos == medios;
+    }
 }
