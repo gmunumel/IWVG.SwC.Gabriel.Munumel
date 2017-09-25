@@ -7,8 +7,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({
     DecimalCollectionTest.class,
-    PointTest.class,
-    FractionTest.class
+    PointTest.class
 })
 public class AllForgeEcp2Tests {
 
