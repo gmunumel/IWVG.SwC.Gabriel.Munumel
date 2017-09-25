@@ -46,8 +46,13 @@ public class PointTest {
     }
 
     @Test
-    public void testToString() {
-        assertEquals("Point[2,3]", pt.toString());
+    public void testLimitX() {
+        assertEquals(pt.getX(), pt.limitX());
+    }
+    
+    @Test
+    public void testLimitY() {
+        assertEquals(pt.getY(), pt.limitY());
     }
 
 }
