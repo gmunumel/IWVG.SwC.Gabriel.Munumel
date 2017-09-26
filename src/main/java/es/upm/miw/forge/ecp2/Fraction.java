@@ -60,10 +60,9 @@ public class Fraction {
         return (double) numerator / denominator;
     }
     
-    public boolean mayor(Fraction a, Fraction b) {
-		assert a != null;
+    public boolean mayor(Fraction b) {
 		assert b != null;
-	    return a.decimal() > b.decimal();
+	    return this.decimal() > b.decimal();
 	}
     
     public boolean isEquivalente(Fraction a, Fraction b) {
