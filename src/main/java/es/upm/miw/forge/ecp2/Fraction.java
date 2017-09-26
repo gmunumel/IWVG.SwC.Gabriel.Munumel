@@ -73,4 +73,9 @@ public class Fraction {
         int medios = a.denominator*b.numerator;
         return extremos == medios;
     }
+    
+    public boolean isPropia(){
+        
+        return this.numerator < this.denominator;
+    }
 }
