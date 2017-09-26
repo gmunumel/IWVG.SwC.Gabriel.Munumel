@@ -18,5 +18,30 @@ public class UserTest {
 	public void testUserNameToUpperCase() {
 		assertEquals("PERICO", this.usr.userNameToUpperCase());
 	}
+	
+	@Test
+	public void testGetNumber() {
+		assertEquals(5, this.usr.getNumber());
+	}
+	
+	@Test
+	public void testGetName() {
+		assertEquals("Perico", this.usr.getName());
+	}
+	
+	@Test
+	public void testGetFamilyName() {
+		assertEquals("delgado", this.usr.getFamilyName());
+	}
+	
+	@Test
+	public void testFullName() {
+		assertEquals("Perico delgado", this.usr.fullName());
+	}
+	
+	@Test
+	public void testInitials() {
+		assertEquals("P.", this.usr.initials());
+	}
 
 }

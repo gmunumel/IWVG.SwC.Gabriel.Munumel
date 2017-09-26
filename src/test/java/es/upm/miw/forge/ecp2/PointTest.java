@@ -56,8 +56,14 @@ public class PointTest {
 
     @Test
     public void testLimitX() {
-        exception.expect(IllegalArgumentException.class);
-        ptOutOfBoundsX.limitX();
+    	 	exception.expect(IllegalArgumentException.class);
+    	 	ptOutOfBoundsX.limitX();
+    }
+    
+    @Test
+    public void testLimitXNotException() {
+    		ptOutOfBoundsX = new Point(1, 1);
+        assertEquals(1, ptOutOfBoundsX.limitX());
     }
 
     @Test
@@ -72,6 +78,25 @@ public class PointTest {
     public void testLimitY() {
         exception.expect(IllegalArgumentException.class);
         ptOutOfBoundsY.limitY();
+    }
+    
+    @Test
+    public void testLimitYNotException() {
+    		ptOutOfBoundsX = new Point(-1, 101);
+        ptOutOfBoundsY = new Point(1, 1);
+        assertEquals(1, ptOutOfBoundsY.limitY());
+    }
+    
+    @Test
+    public void testPointOneParamenter() {
+    	 	pt = new Point(2);
+         assertEquals(2, pt.getX());
+         assertEquals(2, pt.getY());
+    }
+    
+    @Test
+    public void toStringTest() {
+    		assertEquals("Point[2,3]", pt.toString());
     }
 
 }
