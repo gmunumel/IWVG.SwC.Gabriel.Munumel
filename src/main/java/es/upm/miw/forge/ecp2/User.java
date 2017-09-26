@@ -30,7 +30,7 @@ public class User {
         return this.familyName;
     }
 
-    public String fullName() {
+    public String fullName() { 
         return this.name + " " + this.familyName;
     }
 

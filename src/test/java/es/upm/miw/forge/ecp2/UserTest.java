@@ -31,12 +31,12 @@ public class UserTest {
 	
 	@Test
 	public void testGetFamilyName() {
-		assertEquals("delgado", this.usr.getFamilyName());
+		assertEquals("Delgado", this.usr.getFamilyName());
 	}
 	
 	@Test
 	public void testFullName() {
-		assertEquals("Perico delgado", this.usr.fullName());
+		assertEquals("Perico Delgado", this.usr.fullName());
 	}
 	
 	@Test
