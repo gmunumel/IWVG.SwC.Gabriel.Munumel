@@ -3,16 +3,25 @@ package es.upm.miw.forge.ecp2;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 import es.upm.miw.forge.ecp2.Point;
 
 public class PointTest {
     private Point pt;
-
+    private Point ptOutOfBoundsX;
+    private Point ptOutOfBoundsY;
+    
+    @Rule
+    public ExpectedException exception = ExpectedException.none();
+    
     @Before
     public void before() {
         pt = new Point(2, 3);
+        ptOutOfBoundsX = new Point(-1, 101);
+        ptOutOfBoundsY = new Point(-11, 11);
     }
 
     @Test
@@ -47,12 +56,22 @@ public class PointTest {
 
     @Test
     public void testLimitX() {
+        exception.expect(IllegalArgumentException.class);
+        ptOutOfBoundsX.limitX();
+    }
+
+    @Test
+    public void testLimitXException() {
         assertEquals(pt.getX(), pt.limitX());
     }
-    
+    @Test
+    public void testLimitYException() {
+        assertEquals(pt.getY(), pt.limitY());
+    }
     @Test
     public void testLimitY() {
-        assertEquals(pt.getY(), pt.limitY());
+        exception.expect(IllegalArgumentException.class);
+        ptOutOfBoundsY.limitY();
     }
 
 }
